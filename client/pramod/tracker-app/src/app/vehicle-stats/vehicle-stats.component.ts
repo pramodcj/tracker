@@ -28,11 +28,6 @@ export class VehicleStatsComponent implements OnInit {
   readings;
   showMap;
 
-  val = {
-    "name": "",
-    "value": ""
-  };
-
   chartdata=[{
     "name": "",
     "series": []
@@ -58,7 +53,7 @@ export class VehicleStatsComponent implements OnInit {
   // line, area
   autoScale = true;
 
-  constructor(private vehicleService: VehicleService ) { }
+  constructor(private vehicleService: VehicleService) { }
 
   ngOnInit() {
     this.vehicleService.getVehicles()
@@ -77,31 +72,27 @@ refreshData(){
 
   getList(){
 
-    this.vehicleService.getList(this.vin,this.prop,this.from,this.to)
-      .subscribe(
-        (readings) => {
-          this.readings = readings;
-          this.chartdata[0].name = this.prop;
-          for(let reading of this.readings){
-            this.val.name=reading.timestamp;
-            this.val.value=reading[this.prop];
-            this.chartdata[0].series.push(this.val);
-            this.chartdata = [...this.chartdata];
+     var vstatVm = this;
+
+    vstatVm.vehicleService.getList(this.vin,this.prop,this.from,this.to).toPromise()
+      .then(function (readings) {
+        vstatVm.readings = readings;
+
+        vstatVm.chartdata[0].name = vstatVm.prop;
+        for (let reading of vstatVm.readings) {
+          const val = {
+            "name": reading.timestamp,
+            "value": reading[vstatVm.prop]
           }
+          vstatVm.chartdata[0].series.push(val);
+          vstatVm.chartdata = [...vstatVm.chartdata];
 
-        },
-            error => console.log(error)
-      );
-    /*this.chartdata.name = this.prop;
-    console.log(this.chartdata.name);
-    console.log(this.readings);
-    for(let reading of this.readings){
-      this.val.name=reading.timestamp;
-      this.val.value=reading[this.prop];
-      this.chartdata.series.push(this.val);
-    }
-    console.log(this.chartdata);*/
-
+        }
+        console.log(vstatVm.chartdata);
+      },
+        function (error){
+          console.log(error);
+        })
   }
 
   reset(){
