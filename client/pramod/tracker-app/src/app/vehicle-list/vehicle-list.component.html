@@ -1,0 +1,33 @@
+<!--<a [routerLink]="['/registration']" class="btn btn-primary">Create User</a><br />-->
+<p></p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">Vin#</th>
+          <th scope="col">Make</th>
+          <th scope="col">Model</th>
+          <th scope="col">Year</th>
+          <th scope="col">LastServiceDate</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let vehicle of vehicles">
+          <td><a [routerLink]="['/vehicles',vehicle.vin]">{{vehicle.vin}}</a></td>
+          <td>{{vehicle.make}}</td>
+          <td>{{vehicle.model}}</td>
+          <td>{{vehicle.year}}</td>
+          <td>{{vehicle.lastServiceDate | date: 'shortDate'}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+      <agm-map [zoom]=1>
+        <agm-marker *ngFor="let reading of readings" [latitude]="reading.latitude" [longitude]="reading.longitude" [label]="reading.vin"></agm-marker>
+      </agm-map>
+    </div>
+  </div>
+</div>

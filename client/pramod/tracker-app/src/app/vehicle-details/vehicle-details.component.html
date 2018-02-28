@@ -1,0 +1,93 @@
+<p>
+  <a [routerLink]="['/vehicles']" class="btn btn-primary">Go Back</a><br />
+</p>
+
+<div class="card-group">
+  <div class="card">
+    <div class="card-block">
+      <address>
+        <p class="card-text">VIN#</p><h4 class="card-title">{{vehicle.vin}}</h4>
+        <h6>{{vehicle.make}} - {{vehicle.model}} - {{vehicle.year}}</h6>
+        <p class="card-text">Redline RPM is:  <strong>{{vehicle.redlineRpm}}</strong></p>
+        <p class="card-text">Fuel Tank Capacity is:  <strong>{{vehicle.maxFuelVolume}}</strong></p>
+        <p class="card-text">Last Serviced On:</p>
+        <strong>{{vehicle.lastServiceDate | date: 'full'}}</strong>
+      </address>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-block">
+      <agm-map [latitude]="reading.latitude" [longitude]="reading.longitude" [zoom]=2>
+        <agm-marker [latitude]="reading.latitude" [longitude]="reading.longitude" [label]="reading.vin"></agm-marker>
+      </agm-map>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <h6>Current Status of the Vehicle as of:({{reading.timestamp | date:'full'}})</h6>
+  </div>
+  <div class="row">
+    <div class="col">
+    <p class="card-text">Fuel Volume:  <strong>{{reading.fuelVolume}}</strong></p>
+    </div>
+    <div class="col">
+      <p class="card-text">Speed:  <strong>{{reading.speed}}</strong></p>
+    </div>
+    <div class="col">
+      <p class="card-text">Cruise Control:
+        <strong *ngIf="reading.cruiseControlOn === true">ON</strong>
+        <strong *ngIf="reading.cruiseControlOn === false">Off</strong>
+      </p>
+    </div>
+    <div class="col">
+      <p class="card-text">Engine Hp:  <strong>{{reading.engineHp}}</strong></p>
+    </div>
+    <div class="col">
+    <p class="card-text">Engine Health:
+      <strong *ngIf="reading.checkEngineLightOn === true">Needs Check</strong>
+      <strong *ngIf="reading.checkEngineLightOn === false">Normal</strong>
+    </p>
+    </div>
+    <div class="col">
+    <p class="card-text">Engine Coolant:
+      <strong *ngIf="reading.engineCoolantLow === true">LOW</strong>
+      <strong *ngIf="reading.engineCoolantLow === false">Normal</strong>
+    </p>
+    </div>
+    <div class="col">
+    <p class="card-text">Engine RPM:  <strong>{{reading.engineRpm}}</strong></p>
+    </div>
+  </div>
+  <div class="row">
+    <p class="card-text"><strong>Tire Pressures:</strong></p>
+  </div>
+  <div class="row">
+    <div class="col">
+    <p class="card-text">Front Left:  </p>
+    </div>
+    <div class="col">
+    <p class="card-text">Front Right:  </p>
+    </div>
+    <div class="col">
+    <p class="card-text">Rear Left:  </p>
+    </div>
+    <div class="col">
+    <p class="card-text">Rear Right:  </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+    <strong>{{reading.tires.frontLeft}}</strong>
+    </div>
+    <div class="col">
+    <strong>{{reading.tires.frontRight}}</strong>
+    </div>
+    <div class="col">
+    <strong>{{reading.tires.rearLeft}}</strong>
+    </div>
+    <div class="col">
+    <strong>{{reading.tires.rearRight}}</strong>
+    </div>
+  </div>
+</div>
