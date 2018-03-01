@@ -1,0 +1,16 @@
+th {
+  cursor: pointer;
+  color: brown;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+th span {
+  visibility: hidden;
+}
+
+th.active {
+  color: #000;
+}
+th.active span {
+  visibility: visible;
+}

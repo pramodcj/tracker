@@ -17,7 +17,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let alert of alerts | orderBy: order:reverse:'case-insensitive'">
+        <tr *ngFor="let alert of highalerts | orderBy: order:reverse:'case-insensitive'">
           <td><a [routerLink]="['/vehicles',alert.vin]">{{alert.vin}}</a></td>
           <td>{{alert.highalertcount}}</td>
         </tr>

@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
-import { VehicleAlertsComponent } from './vehicle-alerts/vehicle-alerts.component';
+import { VehicleHighAlertsComponent } from './vehicle-highalerts/vehicle-highalerts.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {RouterModule, Routes} from "@angular/router";
@@ -15,12 +15,14 @@ import {NgxChartsModule} from "@swimlane/ngx-charts";
 import { VehicleStatsComponent } from './vehicle-stats/vehicle-stats.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {OrderModule} from "ngx-order-pipe";
+import { VehicleAlertsComponent } from './vehicle-alerts/vehicle-alerts.component';
 
 const appRoutes: Routes = [
   { path: 'vehicles', component: VehicleListComponent },
   { path: 'vehicles/:id', component: VehicleDetailsComponent },
-  { path: 'alerts', component: VehicleAlertsComponent },
+  { path: 'highAlerts', component: VehicleHighAlertsComponent },
   { path: 'vehicleStats', component: VehicleStatsComponent },
+  { path: 'alerts', component: VehicleAlertsComponent },
   { path: '', redirectTo: '/vehicles', pathMatch: 'full' }
 ];
 
@@ -29,8 +31,9 @@ const appRoutes: Routes = [
     AppComponent,
     VehicleListComponent,
     VehicleDetailsComponent,
-    VehicleAlertsComponent,
-    VehicleStatsComponent
+    VehicleHighAlertsComponent,
+    VehicleStatsComponent,
+    VehicleAlertsComponent
   ],
   imports: [
     BrowserModule,

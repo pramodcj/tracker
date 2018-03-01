@@ -3,13 +3,13 @@ import {VehicleService} from "../vehicle.service";
 import {OrderPipe} from "ngx-order-pipe";
 
 @Component({
-  selector: 'app-vehicle-alerts',
-  templateUrl: './vehicle-alerts.component.html',
-  styleUrls: ['./vehicle-alerts.component.css']
+  selector: 'app-vehicle-highalerts',
+  templateUrl: './vehicle-highalerts.component.html',
+  styleUrls: ['./vehicle-highalerts.component.css']
 })
-export class VehicleAlertsComponent implements OnInit {
+export class VehicleHighAlertsComponent implements OnInit {
 
-  alerts;
+  highalerts;
   order: string ='vin';
   reverse: boolean = false;
 
@@ -17,12 +17,13 @@ export class VehicleAlertsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.vehicleService.getAlerts()
+    this.vehicleService.getHighAlerts()
       .subscribe(
-        alerts => this.alerts = alerts,
+        highalerts => this.highalerts = highalerts,
         error => console.log(error)
       );
   }
+
 
 
   setOrder(value: string) {

@@ -1,0 +1,48 @@
+<div class="fluid">
+  <div calss="row">
+    <div clas="col-4">
+      <strong>Select Vehicle Vin#:</strong>
+      <select class="form-control"
+              name="vin"
+              [(ngModel)]="vin"
+              #vinid="ngModel"
+              (select)="0"
+              (change)="getAlerts()"
+              required>
+        <option *ngFor="let vehicle of vehicles" [value]="vehicle.vin">{{vehicle.vin}}</option>
+      </select>
+    </div>
+  </div><br>
+  <div class="row">
+    <p>Following are the All Alerts for Selected VIN# <strong>{{vin}}</strong></p><br>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table table-bordered table-striped" id="alert">
+        <thead>
+        <tr>
+          <th scope="col" [class.active]="order === 'alertTime'" (click)="setOrder('alertTime')">
+            Alert Time
+            <span [hidden]="reverse">▼</span>
+            <span [hidden]="!reverse">▲</span>
+          </th>
+          <th scope="col">Reason</th>
+          <th scope="col" [class.active]="order === 'alertLevel'" (click)="setOrder('alertLevel')" class="mdl-data-table__cell--non-numeric">
+            Alert Level
+            <span [hidden]="reverse">▼</span>
+            <span [hidden]="!reverse">▲</span>
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let alert of alerts | orderBy: order:reverse:'case-insensitive'">
+          <!--<td><a [routerLink]="['/vehicles',alert.vin]">{{alert.vin}}</a></td>-->
+          <td>{{alert.alertTime | date:'short'}}</td>
+          <td>{{alert.reason}}</td>
+          <td>{{alert.alertLevel}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

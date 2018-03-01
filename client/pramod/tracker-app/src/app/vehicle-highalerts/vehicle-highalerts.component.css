@@ -2,6 +2,7 @@ th {
   cursor: pointer;
   margin-right: 15px;
   margin-left: 15px;
+  color: brown;
 }
   th span {
     visibility: hidden;

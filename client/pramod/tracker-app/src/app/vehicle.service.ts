@@ -26,8 +26,12 @@ export class VehicleService {
     return this.http.get(`http://localhost:8080/cartracker/readings/${vin}`);
   }
 
-  getAlerts(){
+  getHighAlerts(){
     return this.http.get('http://localhost:8080/cartracker/alerts/HIGH/two_hours/all');
+  }
+
+  getAlerts(vin){
+    return this.http.get(`http://localhost:8080/cartracker/alerts/all/${vin}`);
   }
 
   getList(vin,prop,from,to){
