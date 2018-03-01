@@ -1,16 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {VehicleService} from "../vehicle.service";
-import {forEach} from "@angular/router/src/utils/collection";
-
-interface svalue {
-  name: string;
-  value: number;
-}
-
-interface values{
-  name: string;
-  series: Array<svalue>;
-}
 
 @Component({
   selector: 'app-vehicle-stats',
@@ -26,7 +15,6 @@ export class VehicleStatsComponent implements OnInit {
   prop = null;
   vin;
   readings;
-  showMap;
 
   chartdata=[{
     "name": "",
@@ -42,12 +30,10 @@ export class VehicleStatsComponent implements OnInit {
   showXAxisLabel = true;
   xAxisLabel = 'Time';
   showYAxisLabel = true;
-  yAxisLabel = this.prop;
-  updateInterval;
-
+  yAxisLabel;
 
   colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    domain: ['#402626','#de1616','#694e4e','#7a1111']//['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   };
 
   // line, area
@@ -61,18 +47,13 @@ export class VehicleStatsComponent implements OnInit {
         vehicles => this.vehicles = vehicles,
         error => console.log(error)
       );
-    //this.updateInterval = setInterval(() => this.refreshData(), 1000);
   }
-
-
-refreshData(){
-    this.chartdata = [...this.chartdata];
-}
 
 
   getList(){
 
-     var vstatVm = this;
+    var vstatVm = this;
+    vstatVm.yAxisLabel= vstatVm.prop;
 
     vstatVm.vehicleService.getList(this.vin,this.prop,this.from,this.to).toPromise()
       .then(function (readings) {

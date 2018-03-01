@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {VehicleService} from "../vehicle.service";
 
 @Component({
@@ -9,7 +9,9 @@ import {VehicleService} from "../vehicle.service";
 export class VehicleAlertsComponent implements OnInit {
 
   alerts;
-  constructor(private vehicleService: VehicleService) { }
+
+  constructor(private vehicleService: VehicleService) {
+  }
 
   ngOnInit() {
     this.vehicleService.getAlerts()

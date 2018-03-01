@@ -13,22 +13,5 @@
 
   <app-root></app-root>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script type="text/javascript">
-    $(function () {
-      $('#datetimepicker1'').datetimepicker();
-      $('#datetimepicker2').datetimepicker({
-        useCurrent: false //Important! See issue #1075
-      });
-      $("#datetimepicker1").on("dp.change", function (e) {
-        $('#datetimepicker2').data("DateTimePicker").minDate(e.date);
-      });
-      $("#datetimepicker2").on("dp.change", function (e) {
-        $('#datetimepicker1').data("DateTimePicker").maxDate(e.date);
-      });
-    });
-  </script>
 </body>
 </html>
