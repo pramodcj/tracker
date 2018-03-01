@@ -13,7 +13,7 @@ import java.util.Date;
 @Entity
 @NamedQueries({
         @NamedQuery(name = "Vehicle.findAll",query = "select v from Vehicle v order by v.vin desc"),
-        @NamedQuery(name = "Vehicle.findone",query = "select v from Vehicle v where v.vin=:paramVin"),
+        @NamedQuery(name = "Vehicle.findOne",query = "select v from Vehicle v where v.vin=:paramVin"),
 })
 public class Vehicle {
     @Id

@@ -26,11 +26,13 @@ public class AlertController {
 
     @RequestMapping(method = RequestMethod.GET,value = "/HIGH/two_hours/all")
     public List<VehicleStatistics> findAllalerts(){
-        List<Alert> alerts = alertService.getAllAlerts();
-        List<VehicleStatistics> vehicleStatistics = new ArrayList<VehicleStatistics>();
-        for (Alert alert:alerts)
+        List<VehicleStatistics> stats = alertService.getAllAlerts();
+        //List<VehicleStatistics> vehicleStatistics = alertService.getAllAlerts();
+        /*List<VehicleStatistics> vehicleStatistics = new ArrayList<VehicleStatistics>();
+        for (VehicleStatistics alert:alerts)
             vehicleStatistics.add(new VehicleStatistics(alert.getVin(),alert.getCount()));
-        return vehicleStatistics;
+        return vehicleStatistics;*/
+        return stats;
     }
 
     @RequestMapping(method = RequestMethod.GET,value = "/all/{vin}")

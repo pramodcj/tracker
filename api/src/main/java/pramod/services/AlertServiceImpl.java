@@ -3,6 +3,7 @@ package pramod.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pramod.entity.Alert;
+import pramod.entity.VehicleStatistics;
 import pramod.repository.AlertRepository;
 
 import java.util.List;
@@ -17,8 +18,8 @@ public class AlertServiceImpl implements AlertService {
         return alertRepository.createAlert(alert);
     }
 
-    public List<Alert> getAllAlerts() {
-        List<Alert> list = alertRepository.getAllAlerts();
+    public List<VehicleStatistics> getAllAlerts() {
+        List<VehicleStatistics> list = alertRepository.getAllAlerts();
         return list!=null?list:null;
     }
 

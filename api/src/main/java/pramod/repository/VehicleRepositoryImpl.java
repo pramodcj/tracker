@@ -26,7 +26,7 @@ public class VehicleRepositoryImpl implements VehicleRepository {
 
     public Vehicle findOneVehicle(String vinid) {
 
-        TypedQuery<Vehicle> query = em.createNamedQuery("Vehicle.findone", Vehicle.class);
+        TypedQuery<Vehicle> query = em.createNamedQuery("Vehicle.findOne", Vehicle.class);
         query.setParameter("paramVin", vinid);
 
         List<Vehicle> listvehicles = query.getResultList();

@@ -2,12 +2,27 @@ package pramod.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+
+@Entity
+@NamedQueries({
+        @NamedQuery(name = "VehicleStatistics.findAllHighAlerts", query = "select vs from VehicleStatistics vs")
+})
+
 public class VehicleStatistics {
 
-    @JsonProperty("VIN")
+    @Id
+    @JsonProperty("vin")
     private String vin;
     @JsonProperty("highalertcount")
     private long count;
+
+    public VehicleStatistics(){
+
+    }
 
     public VehicleStatistics(String vin, long count) {
         this.vin = vin;

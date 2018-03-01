@@ -5,22 +5,27 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @NamedQueries({
         @NamedQuery(name = "Reading.findAll",query = "select r from Reading r order by r.timestamp desc"),
-        @NamedQuery(name = "Reading.findOneById",query = "select r from Reading r where r.readingId=:paramReadingID"),
+        @NamedQuery(name = "Reading.findOneByVin",query = "select r from Reading r where r.vin=:paramVin order by r.timestamp desc"),
+        @NamedQuery(name = "Reading.trackAll",query = "select r1 from Reading r1 where r1.timestamp = (select max(r2.timestamp) from Reading r2 where r1.vin = r2.vin) group by r1.vin"),
+        @NamedQuery(name = "Reading.range", query = "select r from Reading r where r.vin=:paramVin and (r.timestamp >= STR_TO_DATE(:paramFrom, '%Y-%m-%dT%H:%i')) and (r.timestamp <= STR_TO_DATE(:paramTo, '%Y-%m-%dT%H:%i')) order by r.timestamp")
 })
 public class Reading {
     @Id
     private String readingId;
+
     private String vin;
     private double latitude;
     private double longitude;
     @JsonProperty("timestamp")
-    private Date timestamp;
+    private Timestamp timestamp;
     private float fuelVolume;
     private int speed;
     private int engineHp;
@@ -39,9 +44,10 @@ public class Reading {
         return readingId;
     }
 
-    public void setReadingId(String readingId) {
-        this.readingId = readingId;
+    public Reading(){
+        this.readingId= UUID.randomUUID().toString();
     }
+
 
     public String getVin() {
         return vin;
@@ -68,11 +74,11 @@ public class Reading {
     }
 
     @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "yyyy-MM-dd'T'HH:mm:ss.sss'Z'")
-    public Date getTimestamp() {
+    public Timestamp getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Date timestamp) {
+    public void setTimestamp(Timestamp timestamp) {
         this.timestamp = timestamp;
     }
 

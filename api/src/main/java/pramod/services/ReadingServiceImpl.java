@@ -12,6 +12,7 @@ import pramod.repository.AlertRepository;
 import pramod.repository.ReadingRepository;
 import pramod.repository.VehicleRepository;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,13 +45,13 @@ public class ReadingServiceImpl implements ReadingService {
             }
             reading.setAlerts(allalerts);
         }
-        reading.setAlerts(allalerts);
+        //reading.setAlerts(allalerts);
         readingRepository.createReading(reading);
         return reading;
     }
 
-    public Reading findOneReading(String readingID) {
-        Reading exist = readingRepository.findOneReading(readingID);
+    public Reading findOneReading(String vin) {
+        Reading exist = readingRepository.findOneReading(vin);
         if(exist!=null)
         {
             return exist;
@@ -65,6 +66,26 @@ public class ReadingServiceImpl implements ReadingService {
         if(allreadings.size()!=0)
         {
             return allreadings;
+        }
+        else
+            throw new ResourceNotFoundException("No Readings are Available");
+    }
+
+    public List<Reading> findTopReading() {
+        List<Reading> topreadings  = readingRepository.findTopReading();
+        if(topreadings.size()!=0)
+        {
+            return topreadings;
+        }
+        else
+            throw new ResourceNotFoundException("No Readings are Available");
+    }
+
+    public List<Reading> findRangeReadings(String vin, String prop, String from, String to){
+        List<Reading> rangeReadings = readingRepository.findRangeReadings(vin, prop, from, to);
+        if(rangeReadings.size()!=0)
+        {
+            return rangeReadings;
         }
         else
             throw new ResourceNotFoundException("No Readings are Available");
@@ -106,6 +127,7 @@ public class ReadingServiceImpl implements ReadingService {
         //ArrayList<String> alertlist = new ArrayList<String>();//list to store the errors
 
         Vehicle vehicle = vehicleRepository.findOneVehicle(reading.getVin());
+        System.out.println(vehicle.toString());
         Timestamp  ts;
 
         Alert x;

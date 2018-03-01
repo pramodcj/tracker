@@ -5,13 +5,15 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.UUID;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(query = "select new pramod.entity.Alert(a.vin,count(a.alertLevel))from Alert a where a.alertLevel='HIGH' and a.alertTime>:paramalertTimeStamp group by a.vin",name = "Alert.findAllHighAlerts"),
-        @NamedQuery(query = "select a from Alert a where a.vin=:alertparamVin order by a.alertTime desc ",name = "Alert.findAllByVin")
+        //@NamedQuery(name = "Alert.findAllHighAlerts", query = "select a from alertstat a"),
+        @NamedQuery(name = "Alert.findAllByVin", query = "select a from Alert a where a.vin=:alertparamVin order by a.alertTime desc "),
+        @NamedQuery(name = "Alert.findOne", query = "select a from Alert a where a.alertID=:paramalertID order by a.alertTime desc")
 })
 
 public class Alert {
@@ -26,7 +28,7 @@ public class Alert {
     private String reason;
     private String alertLevel;
     @JsonProperty("alertTime")
-    private Date alertTime;
+    private Timestamp alertTime;
     private String useremail;
 
     @JsonIgnore
@@ -66,11 +68,11 @@ public class Alert {
     }
 
     @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "yyyy-MM-dd'T'HH:mm:ss.sss'Z'")
-    public Date getAlertTime() {
+    public Timestamp getAlertTime() {
         return alertTime;
     }
 
-    public void setAlertTime(Date alertTime) {
+    public void setAlertTime(Timestamp alertTime) {
         this.alertTime = alertTime;
     }
 
