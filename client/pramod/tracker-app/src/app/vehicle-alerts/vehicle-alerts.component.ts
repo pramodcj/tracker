@@ -1,5 +1,6 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {VehicleService} from "../vehicle.service";
+import {OrderPipe} from "ngx-order-pipe";
 
 @Component({
   selector: 'app-vehicle-alerts',
@@ -9,8 +10,10 @@ import {VehicleService} from "../vehicle.service";
 export class VehicleAlertsComponent implements OnInit {
 
   alerts;
+  order: string ='vin';
+  reverse: boolean = false;
 
-  constructor(private vehicleService: VehicleService) {
+  constructor(private vehicleService: VehicleService, private orderPipe: OrderPipe) {
   }
 
   ngOnInit() {
@@ -19,6 +22,14 @@ export class VehicleAlertsComponent implements OnInit {
         alerts => this.alerts = alerts,
         error => console.log(error)
       );
+  }
+
+
+  setOrder(value: string) {
+    if (this.order === value) {
+      this.reverse = !this.reverse;
+    }
+    this.order = value;
   }
 
 }

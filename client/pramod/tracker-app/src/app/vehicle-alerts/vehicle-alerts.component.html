@@ -1,23 +1,23 @@
 <div class="fluid">
   <div class="row">
     <div class="col-6">
-      <table class="table table-bordered table-striped">
+      <table class="table table-bordered table-striped" id="alert">
         <thead>
         <tr>
-          <th scope="col" >
-            <a href="./alerts">
-              Vin#
-            </a>
+          <th scope="col" [class.active]="order === 'vin'" (click)="setOrder('vin')" class="mdl-data-table__cell--non-numeric">
+            VIN#
+            <span [hidden]="reverse">▼</span>
+            <span [hidden]="!reverse">▲</span>
           </th>
-          <th scope="col">
-            <a href="./alerts">
-              HighAlertCount
-            </a>
+          <th scope="col" [class.active]="order === 'highalertcount'" (click)="setOrder('highalertcount')">
+            High Alert#
+            <span [hidden]="reverse">▼</span>
+            <span [hidden]="!reverse">▲</span>
           </th>
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let alert of alerts">
+        <tr *ngFor="let alert of alerts | orderBy: order:reverse:'case-insensitive'">
           <td><a [routerLink]="['/vehicles',alert.vin]">{{alert.vin}}</a></td>
           <td>{{alert.highalertcount}}</td>
         </tr>

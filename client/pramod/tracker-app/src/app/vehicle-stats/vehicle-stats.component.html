@@ -1,26 +1,66 @@
 <div class="container">
-    <ngForm name="statsForm">
+    <form novalidate #statsForm="ngForm" (ngSubmit)="getList()" name="statsForm">
       <br>
+      <p>* marked fields are mandatory</p>
       <div class="row">
         <div class="col">
-        From:
-        <input class="form-control" type="datetime-local" name="from" [(ngModel)]="from">
-        To:
-        <input class="form-control" type="datetime-local" name="to" [(ngModel)]="to">
-        Select Property:
-          <select class="form-control" name="property" [(ngModel)]="prop" id="inputState" placeholder="Choose..">
+        *From:
+        <input class="form-control"
+               type="datetime-local"
+               #fromDate="ngModel"
+               name="from"
+               [(ngModel)]="from"
+               pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+               required>
+          <div *ngIf="fromDate.errors && (fromDate.dirty || fromDate.touched)">
+            <p>Input Proper DateTime Format</p>
+          </div>
+        *To:
+        <input class="form-control"
+               type="datetime-local"
+               #toDate="ngModel"
+               name="to"
+               [(ngModel)]="to"
+               pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+               required>
+          <div *ngIf="toDate.errors && (toDate.dirty || toDate.touched)">
+            <p>Input Proper DateTime Format</p>
+          </div>
+          <div *ngIf="fromDate.dirty && !fromDate.errors && toDate.dirty && !toDate.errors && (to < from)">
+            <p> To Date Must be Equal or Greater </p>
+          </div>
+        *Select Property:
+          <select class="form-control"
+                  name="property"
+                  #property="ngModel"
+                  [(ngModel)]="prop"
+                  (select)="0"
+                  required>
             <option>fuelVolume</option>
             <option>speed</option>
             <option>engineHp</option>
             <option>engineRpm</option>
           </select>
-         Select Vehicle Vin#:
-          <select class="form-control" name="vin" [(ngModel)]="vin" id="inputState" placeholder="Choose..">
+          <div *ngIf="property.errors && (property.dirty || property.touched)">
+            <p [hidden]="!property.errors.required">Property is required</p>
+          </div>
+            *Select Vehicle Vin#:
+          <select class="form-control"
+                  name="vin"
+                  [(ngModel)]="vin"
+                  #vinid="ngModel"
+                  (select)="0"
+                  required>
             <option *ngFor="let vehicle of vehicles" [value]="vehicle.vin">{{vehicle.vin}}</option>
-          </select><br>
-          <input class="btn btn-primary" type="submit" name="submit" value="submit" (click)="getList()">
-          <input class="btn btn-primary" type="reset" value="Reset" (click)="reset()">
+          </select>
+          <div *ngIf="vinid.errors && (vinid.dirty || vinid.touched)">
+            <p [hidden]="!vinid.errors.required">VIN# is required</p>
+          </div>
+          <br>
+          <input class="btn btn-primary" type="submit" name="submit" value="submit" [disabled]="!statsForm.form.valid">
+          <input class="btn btn-primary" type="reset" name="reset" value="Reset" (click)="reset()">
         </div>
+
         <div class="col">
          <ngx-charts-line-chart
             [view]="view"
@@ -37,6 +77,7 @@
             [autoScale]="autoScale">
          </ngx-charts-line-chart>
         </div>
+        
       </div>
       <!--<div>
         <nav aria-label="Page navigation">
@@ -54,5 +95,5 @@
         </nav>
       </div>-->
 
-    </ngForm>
+    </form>
 </div>

@@ -14,6 +14,7 @@ import {AgmCoreModule} from "@agm/core";
 import {NgxChartsModule} from "@swimlane/ngx-charts";
 import { VehicleStatsComponent } from './vehicle-stats/vehicle-stats.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {OrderModule} from "ngx-order-pipe";
 
 const appRoutes: Routes = [
   { path: 'vehicles', component: VehicleListComponent },
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     AgmCoreModule.forRoot({apiKey: 'AIzaSyCQne3cOrAY1AMN9nx9Pm_k33GQdJHMKQ4'}),
     NgxChartsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    OrderModule
   ],
   providers: [VehicleService],
   bootstrap: [AppComponent]
