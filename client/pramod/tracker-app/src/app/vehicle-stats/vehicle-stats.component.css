@@ -2,3 +2,13 @@ p {
   color: red;
   margin: 0px;
 }
+
+div .col-3{
+  background-color: #cee4eb;
+}
+
+h5 {
+  color: brown;
+  text-align: center;
+  margin: 0px;
+}

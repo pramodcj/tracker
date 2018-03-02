@@ -1,8 +1,8 @@
 <!--<a [routerLink]="['/registration']" class="btn btn-primary">Create User</a><br />-->
-<p></p>
 <div class="container">
   <div class="row">
     <div class="col">
+      <h5>List of Available Vehicles</h5>
       <table class="table table-bordered table-striped">
         <thead>
         <tr>
@@ -25,6 +25,7 @@
       </table>
     </div>
     <div class="col">
+      <h5>Latest Location of the Vehicles</h5><br>
       <agm-map [zoom]=1>
         <agm-marker *ngFor="let reading of readings" [latitude]="reading.latitude" [longitude]="reading.longitude" [label]="reading.vin"></agm-marker>
       </agm-map>

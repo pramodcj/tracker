@@ -2,3 +2,11 @@ agm-map {
   height: 400px;
 }
 
+div .col{
+  background-color: #cee4eb;
+}
+h5 {
+  color: brown;
+  text-align: center;
+  margin: 0px;
+}
