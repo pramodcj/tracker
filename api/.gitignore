@@ -1,0 +1,5 @@
+.idea
+.target
+*.iml
+api/src/test
+client/pramod/tracker-app/node_modules
