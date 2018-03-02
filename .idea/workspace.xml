@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c6f59e91-82cd-41a9-8928-59b8c28afc5a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/api/.idea/workspace.xml" afterPath="$PROJECT_DIR$/api/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="c6f59e91-82cd-41a9-8928-59b8c28afc5a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -17,18 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -65,11 +50,12 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="273" />
-    <option name="y" value="19" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
+    <option name="x" value="314" />
+    <option name="y" value="82" />
+    <option name="width" value="869" />
+    <option name="height" value="565" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -85,6 +71,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -92,35 +79,11 @@
               <item name="tracker" type="b2602c69:ProjectViewProjectNode" />
               <item name="tracker" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="tracker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tracker" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tracker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tracker" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tracker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tracker" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="pramod" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tracker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tracker" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="pramod" type="462c0819:PsiDirectoryNode" />
-              <item name="tracker-app" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -179,12 +142,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7380000" />
+    <option name="totallyTimeSpent" value="7418000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="11" y="14" width="1346" height="688" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29849625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2979502" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -248,27 +211,9 @@
     <entry file="file://$PROJECT_DIR$/client/pramod/src/tsconfig.spec.json" />
     <entry file="file://$PROJECT_DIR$/client/pramod/src/typings.d.ts" />
     <entry file="file://$PROJECT_DIR$/client/pramod/src/app/vehicle-list/vehicle.list.component.ts" />
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/proxy.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/tsconfig.app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/proxy.conf.js" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/tsconfig.json" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/tsconfig.app.json" />
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/phrase.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -276,254 +221,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-details/vehicle-details.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-details/vehicle-details.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-list/vehicle-list.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-list/vehicle-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="8" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="27" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/node_modules/angular5-data-table/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="63" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/node_modules/angular5-data-table/src/angular5-data-table.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/node_modules/angular5-data-table/angular5-data-table.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/node_modules/angular5-data-table/src/components/table.component.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-913">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/node_modules/angular5-data-table/src/components/table.template.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/node_modules/angular5-data-table/src/components/table.style.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="79" lean-forward="false" selection-start-line="0" selection-start-column="79" selection-end-line="0" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle.service.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-63">
-          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="4" column="57" lean-forward="false" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-details/vehicle-details.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-alerts/vehicle-alerts.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-highalerts/vehicle-highalerts.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-highalerts/vehicle-highalerts.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-highalerts/vehicle-highalerts.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-highalerts/vehicle-highalerts.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="15" column="82" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="32" column="15" lean-forward="false" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-stats/vehicle-stats.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="76" column="3" lean-forward="true" selection-start-line="52" selection-start-column="2" selection-end-line="76" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-alerts/vehicle-alerts.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="34" column="10" lean-forward="true" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/app.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-list/vehicle-list.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-list/vehicle-list.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-stats/vehicle-stats.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="79" lean-forward="false" selection-start-line="2" selection-start-column="79" selection-end-line="2" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-stats/vehicle-stats.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-alerts/vehicle-alerts.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-alerts/vehicle-alerts.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="43" column="16" lean-forward="false" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/favicon.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/assets/app_main.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-details/vehicle-details.component.css" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-details/vehicle-details.component.ts" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-list/vehicle-list.component.spec.ts" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-list/vehicle-list.component.ts" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/node_modules/angular5-data-table/README.md" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/node_modules/angular5-data-table/src/angular5-data-table.d.ts" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/node_modules/angular5-data-table/angular5-data-table.d.ts" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/node_modules/angular5-data-table/src/components/table.component.d.ts" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/node_modules/angular5-data-table/src/components/table.template.d.ts" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/node_modules/angular5-data-table/src/components/table.style.d.ts" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/styles.css" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle.service.spec.ts" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/package.json" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/main.ts" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/app.component.ts" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-details/vehicle-details.component.html" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/app.module.ts" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-alerts/vehicle-alerts.component.spec.ts" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-highalerts/vehicle-highalerts.component.spec.ts" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-highalerts/vehicle-highalerts.component.css" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-highalerts/vehicle-highalerts.component.html" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-highalerts/vehicle-highalerts.component.ts" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle.service.ts" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-stats/vehicle-stats.component.ts" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-alerts/vehicle-alerts.component.ts" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/app.component.css" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-list/vehicle-list.component.html" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-list/vehicle-list.component.css" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/app.component.html" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-stats/vehicle-stats.component.html" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-stats/vehicle-stats.component.css" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-alerts/vehicle-alerts.component.css" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/app/vehicle-alerts/vehicle-alerts.component.html" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/favicon.ico" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/assets/app_main.ico" />
+    <entry file="file://$PROJECT_DIR$/client/pramod/tracker-app/src/index.html" />
     <entry file="file://$PROJECT_DIR$/api/app.html" />
     <entry file="file://$PROJECT_DIR$/api/.gitignore" />
     <entry file="file://$PROJECT_DIR$/api/app.js">
@@ -552,7 +285,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
